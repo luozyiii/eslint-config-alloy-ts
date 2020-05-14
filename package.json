@@ -1,0 +1,35 @@
+{
+  "name": "eslint-config-alloy-ts",
+  "version": "1.0.0",
+  "description": "基于eslint-config-alloy的TypeScript项目校验",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luozyiii/eslint-config-alloy-ts.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config-alloy",
+    "eslint-config-alloy-ts",
+    "typescript"
+  ],
+  "author": "leslie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luozyiii/eslint-config-alloy-ts/issues"
+  },
+  "homepage": "https://github.com/luozyiii/eslint-config-alloy-ts#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "eslint": "^7.0.0",
+    "eslint-config-alloy": "^3.7.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.2"
+  }
+}
