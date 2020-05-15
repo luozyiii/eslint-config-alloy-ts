@@ -1,7 +1,7 @@
 // .eslintrc.js
 // extends 这一句很关键 plugin:prettier/recommended
 module.exports = {
-  extends: ["alloy", "alloy/typescript", "plugin:prettier/recommended"],
+  extends: ['alloy', 'alloy/typescript', 'plugin:prettier/recommended'],
   env: {
     // 你的环境变量（包含多个预定义的全局变量）
     //
@@ -18,5 +18,5 @@ module.exports = {
   },
   rules: {
     // 自定义你的规则
-  },
+  }
 };
