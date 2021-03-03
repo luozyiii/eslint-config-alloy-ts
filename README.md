@@ -91,7 +91,7 @@ module.exports = {
 {
   "files.eol": "\n",
   "editor.tabSize": 2,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "eslint.validate": ["javascript", "javascriptreact", "vue", "typescript", "typescriptreact"],
   "editor.codeActionsOnSave": {
@@ -116,3 +116,5 @@ module.exports = {
 
 ```
 并且 vscode 设置 "editor.formatOnSave": false,
+
+2. .prettierrc.js 修改后不立即生效问题 重启vscode
