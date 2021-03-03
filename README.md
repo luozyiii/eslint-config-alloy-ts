@@ -1,18 +1,21 @@
 # eslint-config-alloy-ts
 
->node版本需在12.0.0以上
+> node 版本需在 12.0.0 以上
 
-### 安装ESLint
+### 安装 ESLint
+
 ```
 yarn add eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-alloy -D
 ```
 
-### 安装Prettier
+### 安装 Prettier
+
 ```
 yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 ```
 
-在你的项目的根目录下创建一个 .eslintrc.js 文件，并将以下内容复制进去：  
+在你的项目的根目录下创建一个 .eslintrc.js 文件，并将以下内容复制进去：
+
 ```
 // .eslintrc.js
 // extends 这一句很关键 plugin:prettier/recommended
@@ -40,11 +43,12 @@ module.exports = {
 ```
 
 在你的项目的根目录下创建一个 .prettierrc.js 文件，并将以下内容复制进去：
+
 ```
 // .prettierrc.js
 module.exports = {
-  // 一行最多 100 字符
-  printWidth: 100,
+  // 一行最多 120 字符
+  printWidth: 120,
   // 使用 2 个空格缩进
   tabWidth: 2,
   // 不使用缩进符，而使用空格
@@ -82,33 +86,33 @@ module.exports = {
 ```
 
 ### vscode setting 配置
+
 ```
 {
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "javascriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "html",
-      "autoFix": true
-    },
-    {
-      "language": "vue",
-      "autoFix": true
-    }
-  ],
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.validate": ["javascript", "javascriptreact", "vue", "typescript", "typescriptreact"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   }
 }
+
 ```
+
+### 坑点
+
+1.在 create-react-app v2 搭建的项目里，一旦你用了 eslint(.eslintrc.js 配置) + prettier(.prettierrc.js 配置)，加在项目中的 .prettierrc 配置文件就是无效的，不起作用。
+
+解决方案
+
+```
+// .eslintrc.js
+// extends 这一句很关键 plugin:prettier/recommended
+
+{ extends: ["react-app", "plugin:prettier/recommended"] }
+
+
+```
+并且 vscode 设置 "editor.formatOnSave": false,
